@@ -86,9 +86,14 @@ input, select, textarea {
 		background: #fff;
 		font-family: 'Arial', sans-serif;
 		font-size: 19pt;
-		font-weight: 300;
+		font-weight: 200;
 		line-height: 1.75em;
 		color: #888;
+	}
+
+	strong, b {
+		font-weight: 400;
+		color: #777;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -152,11 +157,6 @@ input, select, textarea {
 
 	footer {
 		margin: 2em 0 0 0;
-	}
-
-	strong, b {
-		font-weight: 500;
-		color: #666;
 	}
 
 	em, i {
