@@ -1,3 +1,10 @@
 section.inactive {
 	display: none;
 }
+
+#main-flex {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	justify-content: space-between;
+}

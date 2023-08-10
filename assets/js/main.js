@@ -29,23 +29,11 @@
 	// Nav.
 		var $nav_a = $nav.find('a');
 
-		$nav_a
-			.on('click', function(e) {
-
-				var $this = $(this);
-
-				// External link? Bail.
-					if ($this.attr('href').charAt(0) != '#')
-						return;
-
-				// Prevent default.
-					e.preventDefault();
-
-				// Deactivate all links.
-					$nav_a.removeClass('active');
-					$this.addClass('active');
-
-			});
+		$nav_a.on('click', function(e) {
+			if ($(this).attr('href').charAt(0) == '#') {
+				e.preventDefault();
+			}
+		});
 
 	// Header (narrower + mobile).
 
