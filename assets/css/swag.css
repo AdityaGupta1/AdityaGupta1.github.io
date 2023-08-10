@@ -8,3 +8,7 @@ section.inactive {
 	flex-direction: column;
 	justify-content: space-between;
 }
+
+html, body, #main-flex, section {
+	height: 100%;
+}

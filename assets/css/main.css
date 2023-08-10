@@ -2208,6 +2208,7 @@ input, select, textarea {
 
 	#main {
 		margin-left: 375px;
+		flex: 1;
 	}
 
 		#main > section {
