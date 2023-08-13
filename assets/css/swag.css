@@ -23,3 +23,20 @@ p {
 	font-size: 20px;
 	line-height: 1.75em;
 }
+
+.item h3 {
+	font-size: 1.5em;
+	text-align: left;
+	padding-left: 20px;
+}
+
+.item p {
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 1em;
+	margin-top: 8px;
+}
+
+.col-4, .col-12-mobile {
+	font-size: 0.7em;
+}
