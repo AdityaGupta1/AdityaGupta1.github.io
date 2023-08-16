@@ -40,3 +40,12 @@ p {
 .col-4, .col-12-mobile {
 	font-size: 0.7em;
 }
+
+header > p {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#art > .container > h3 {
+	margin: 30px 0 20px 0;
+}

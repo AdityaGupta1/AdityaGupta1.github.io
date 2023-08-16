@@ -31,6 +31,7 @@
 
 		$nav_a.on('click', function(e) {
 			if ($(this).attr('href').charAt(0) == '#') {
+				console.log('hi');
 				e.preventDefault();
 			}
 		});
@@ -51,8 +52,7 @@
 					delay: 500,
 					// hideOnClick: true,
 					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
+					// resetScroll: true,
 					side: 'left',
 					target: $body,
 					visibleClass: 'header-visible'
