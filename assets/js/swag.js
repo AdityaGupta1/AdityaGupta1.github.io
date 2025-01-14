@@ -28,7 +28,7 @@ function setPortfolioVisible(visible) {
 }
 
 function setAlbumVisible(targetId) {
-    Array.from(document.getElementsByClassName('photo-album-grid')).forEach(element => {
+    Array.from(document.getElementsByClassName('photo-album-container')).forEach(element => {
         element.style.display = element.id === targetId ? '' : 'none';
     });
 }
