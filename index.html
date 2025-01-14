@@ -36,10 +36,10 @@
             <nav id="nav">
               <ul>
                 <li><a href="#" id='nav-projects' onclick="selectSection('projects')"><span class="icon solid fa-laptop">Projects</span></a></li>
-                <li><a href="#" id='nav-art' onclick="selectSection('art')"><span class="icon solid fa-th">Art</span></a></li>
+                <li><a href="#" id='nav-art' onclick="selectSection('art')"><span class="icon solid fa-paint-brush">Art</span></a></li>
+                <li><a href="#" id='nav-photography' onclick="selectSection('photography')"><span class="icon solid fa-camera">Photography</span></a></li>
                 <li><a href="#" id='nav-about' onclick="selectSection('about')"><span class="icon solid fa-user">About</span></a></li>
                 <li><a href="https://drive.google.com/file/d/10tF34jgbSgniKVnwsj6VeKj-OeNcAgi0/view?usp=sharing" target="_blank"><span class="icon solid fa-file-alt">Résumé</span></a></li>
-                <!-- <li><a href="https://www.youtube.com/watch?v=6wPzVC19TbY" target="_blank"><span class="icon solid fa-video">Demo Reel</span></a></li> -->
               </ul>
             </nav>
 
@@ -51,7 +51,7 @@
               <li><a href="https://github.com/AdityaGupta1/" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
               <li><a href="https://www.instagram.com/sdojhaus/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
               <li><a href="https://www.linkedin.com/in/aditya-gupta1/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-              <li><a href="mailto:adityag1@seas.upenn.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+              <!-- <li><a href="mailto:joe@joe.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li> -->
             </ul>
 
         </div>
@@ -66,6 +66,8 @@
               <header>
                 <h2>Projects</h2>
               </header>
+
+              <p>Click the title of a project to learn more about it.</p>
 
               <article class="item">
                 <a class="image fit"><img src="images/projects/minecraft.png" alt="" /></a>
@@ -126,10 +128,9 @@
               <p>All artworks were made in Blender unless otherwise stated. Most models were downloaded from online; attribution can be found <a href="https://docs.google.com/document/d/15mdXpx4mkEH5s0v_4MQc8M0ew_GXaZvUcSNg2qQa5dM/edit?usp=sharing">here</a>.</p>
 
               <article class="item">
-                <a class="image fit" href="https://media.githubusercontent.com/media/AdityaGupta1/AdityaGupta1.github.io/refs/heads/master/images/renders/new-0008-full.png" target="_blank"><img src="images/renders/new-0008.png" alt="" /></a>
+                <a class="image fit"><img src="images/renders/new-0008.png" alt="" /></a>
                 <header>
                   <h3>新宝島</h3>
-                  <p class="small-left">Click the image for a full resolution (18000×12000 px) version.</p>
                 </header>
               </article>
 
@@ -183,7 +184,7 @@
               <h3>Everydays</h3>
 
               <p>A series of 1271 daily renders, involving a new idea each day. Mostly made in Blender, with some done in Houdini or Maya. A selection of daily renders is shown here. All everydays can be viewed on <a href="https://www.instagram.com/sdojhaus/" target="_blank">Instagram</a>.</p>
-              
+
               <div class="row">
                 <div class="col-4 col-12-mobile">
                   <article class="item">
@@ -270,6 +271,89 @@
             </div>
           </section>
 
+          <section id="photography">
+            <div class="container">
+              <header>
+                <h2>Photography</h2>
+              </header>
+
+              <p>Click on a photo to see more from that album.</p>
+
+              <div id="photo-portfolio-grid">
+                <article class="item">
+                  <a class="image fit" onclick="activateAlbum('australia')"><img src="images/photos/australia_hawaii/001.png" alt="" /></a>
+                  <header>
+                    <h3>Australia + Hawaii</h3>
+                    <h5>2024-25</h5>
+                  </header>
+                </article>
+
+                <article class="item">
+                  <a class="image fit" onclick="activateAlbum('zoos')"><img src="images/photos/zoos/001.png" alt="" /></a>
+                  <header>
+                    <h3>Zoos of the World</h3>
+                    <h5>2024-ongoing</h5>
+                  </header>
+                </article>
+
+                <article class="item">
+                  <a class="image fit" onclick="activateAlbum('tanzania')"><img src="images/photos/tanzania/006.jpg" alt="" /></a>
+                  <header>
+                    <h3>Tanzania Safari</h3>
+                    <h5>2024</h5>
+                  </header>
+                </article>
+              </div>
+
+              <p class="photo-album-back" onclick="deactivateAlbum()"><< Back</p>
+
+              <div class="grid-container photo-album-grid" id="australia-photos">
+                <div class="horizontal"><img src="images/photos/australia_hawaii/001.png"></div>
+                <div class="horizontal"><img src="images/photos/australia_hawaii/002.png"></div>
+                <div class="vertical"><img src="images/photos/australia_hawaii/021.png"></div>
+                <div class="horizontal"><img src="images/photos/australia_hawaii/003.png"></div>
+                <div class="horizontal"><img src="images/photos/australia_hawaii/004.png"></div>
+                <div class="horizontal"><img src="images/photos/australia_hawaii/005.png"></div>
+                <div class="vertical"><img src="images/photos/australia_hawaii/023.png"></div>
+                <div class="horizontal"><img src="images/photos/australia_hawaii/006.png"></div>
+                <div class="vertical"><img src="images/photos/australia_hawaii/022.png"></div>
+                <div class="vertical"><img src="images/photos/australia_hawaii/024.png"></div>
+                <div class="vertical"><img src="images/photos/australia_hawaii/026.png"></div>
+                <div class="horizontal"><img src="images/photos/australia_hawaii/010.png"></div>
+                <div class="horizontal"><img src="images/photos/australia_hawaii/011.png"></div>
+                <div class="vertical"><img src="images/photos/australia_hawaii/027.png"></div>
+                <div class="horizontal"><img src="images/photos/australia_hawaii/012.png"></div>
+                <div class="horizontal"><img src="images/photos/australia_hawaii/013.png"></div>
+                <div class="horizontal"><img src="images/photos/australia_hawaii/014.png"></div>
+                <div class="vertical"><img src="images/photos/australia_hawaii/029.png"></div>
+                <div class="horizontal"><img src="images/photos/australia_hawaii/015.png"></div>
+                <div class="vertical"><img src="images/photos/australia_hawaii/030.png"></div>
+                <div class="horizontal"><img src="images/photos/australia_hawaii/016.png"></div>
+                <div class="vertical"><img src="images/photos/australia_hawaii/031.png"></div>
+                <div class="vertical"><img src="images/photos/australia_hawaii/032.png"></div>
+              </div>
+
+              <div class="grid-container photo-album-grid" id="zoos-photos">
+                <div class="horizontal"><img src="images/photos/zoos/001.png"></div>
+                <div class="horizontal"><img src="images/photos/zoos/002.png"></div>
+                <div class="vertical"><img src="images/photos/zoos/004.png"></div>
+                <div class="horizontal"><img src="images/photos/zoos/003.png"></div>
+                <div class="horizontal"><img src="images/photos/zoos/005.png"></div>
+                <div class="vertical"><img src="images/photos/zoos/007.png"></div>
+                <div class="horizontal"><img src="images/photos/zoos/006.png"></div>
+              </div>
+
+              <div class="grid-container photo-album-grid" id="tanzania-photos">
+                <div class="vertical"><img src="images/photos/tanzania/001.jpg"></div>
+                <div class="horizontal"><img src="images/photos/tanzania/004.jpg"></div>
+                <div class="vertical"><img src="images/photos/tanzania/003.jpg"></div>
+                <div class="horizontal"><img src="images/photos/tanzania/002.jpg"></div>
+                <div class="horizontal"><img src="images/photos/tanzania/005.jpg"></div>
+                <div class="horizontal"><img src="images/photos/tanzania/006.jpg"></div>
+              </div>
+            </div>
+          </section>
+
           <section id="about">
             <div class="container">
               <header>
@@ -288,7 +372,7 @@
 
         <div id="footer">
             <ul class="copyright">
-              <li>&copy; 2024 Aditya Gupta. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+              <li>&copy; 2025 Aditya Gupta. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
             </ul>
         </div>
       </div>
