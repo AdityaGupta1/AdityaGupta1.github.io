@@ -1,8 +1,15 @@
-function selectSection(id) {
+// the following code is pretty terrible but I don't want to use a web framework and this works well enough, so...
+
+function selectSection(id, subsection = '') {
     $('#main > section').addClass('inactive');
     $(`#${id}`).removeClass('inactive');
 
-    window.location.hash = `#${id}`;
+    let newHash = `#${id}`;
+    if (subsection != '') {
+        newHash += `_${subsection}`;
+    }
+
+    window.location.hash = newHash;
     window.scrollTo(0,0);
 
     $('#nav').find('a').removeClass('active');
@@ -31,16 +38,18 @@ function activateAlbum(albumName) {
     targetId = albumName + "-photos";
 
     if (!document.getElementById(targetId)) {
-        return;
+        return false;
     }
 
     setAlbumVisible(targetId);
     setAlbumBackVisibility(true);
     setPortfolioVisible(false);
 
-    $('html, body').animate({ scrollTop: 0 }, 'smooth');
+    $('html, body').scrollTop(0);
 
     window.location.hash = `#photography_${albumName}`;
+
+    return true;
 }
 
 function deactivateAlbum(setHash = true) {
@@ -55,7 +64,7 @@ function deactivateAlbum(setHash = true) {
 
 deactivateAlbum(false);
 
-document.addEventListener('DOMContentLoaded', function() {
+function setSectionFromHash() {
     let section = 'projects';
     let subsection = '';
 
@@ -72,15 +81,20 @@ document.addEventListener('DOMContentLoaded', function() {
         section = 'projects';
     }
 
-    selectSection(section);
+    selectSection(section, subsection);
 
     switch (section) {
         case 'photography':
-            activateAlbum(subsection);
+            if (!activateAlbum(subsection)) {
+                deactivateAlbum();
+            }
             break;
         default:
             break;
     }
 
     document.getElementById('main-flex').style = ''; // show all content only after properly setting section
-});
+}
+
+document.addEventListener('DOMContentLoaded', setSectionFromHash);
+window.addEventListener('hashchange', setSectionFromHash);

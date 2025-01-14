@@ -31,7 +31,6 @@
 
 		$nav_a.on('click', function(e) {
 			if ($(this).attr('href').charAt(0) == '#') {
-				console.log('hi');
 				e.preventDefault();
 			}
 		});
