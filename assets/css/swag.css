@@ -31,7 +31,7 @@ p {
 .item h3 {
     font-size: 1.3em;
     text-align: left;
-    padding-left: 1.6vh;
+    padding: 0 1.6vh 0 1.6vh;
 }
 
 .item h5 {

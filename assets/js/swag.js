@@ -14,6 +14,11 @@ function selectSection(id, subsection = '') {
 
     $('#nav').find('a').removeClass('active');
     $(`#nav-${id}`).addClass('active');
+
+    // close nav bar if open on mobile
+    if (document.body.classList.contains('header-visible')) {
+        document.getElementById('headerToggle').children[0].click();
+    }
 }
 
 function setPortfolioVisible(visible) {
