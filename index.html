@@ -37,7 +37,7 @@
               <ul>
                 <li><a href="#" id='nav-projects' onclick="selectSection('projects')"><span class="icon solid fa-laptop">Projects</span></a></li>
                 <li><a href="#" id='nav-art' onclick="selectSection('art')"><span class="icon solid fa-paint-brush">Art</span></a></li>
-                <li><a href="#" id='nav-photography' onclick="selectSection('photography')"><span class="icon solid fa-camera">Photography</span></a></li>
+                <li><a href="#" id='nav-photography' onclick="selectSection('photography'); deactivateAlbum();"><span class="icon solid fa-camera">Photography</span></a></li>
                 <li><a href="#" id='nav-about' onclick="selectSection('about')"><span class="icon solid fa-user">About</span></a></li>
                 <li><a href="https://drive.google.com/file/d/10tF34jgbSgniKVnwsj6VeKj-OeNcAgi0/view?usp=sharing" target="_blank"><span class="icon solid fa-file-alt">Résumé</span></a></li>
               </ul>
@@ -277,7 +277,7 @@
                 <h2>Photography</h2>
               </header>
 
-              <p>Click on a photo to see more from that album.</p>
+              <p id="photography-click-advice">Click on a photo to see more from that album.</p>
 
               <div id="photo-portfolio-grid">
                 <article class="item">
@@ -351,6 +351,8 @@
                 <div class="horizontal"><img src="images/photos/tanzania/005.jpg"></div>
                 <div class="horizontal"><img src="images/photos/tanzania/006.jpg"></div>
               </div>
+
+              <p class="photo-album-back" style="margin-top: 8px;" onclick="deactivateAlbum()"><< Back</p>
             </div>
           </section>
 

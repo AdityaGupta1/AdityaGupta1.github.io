@@ -10,7 +10,9 @@ function selectSection(id) {
 }
 
 function setPortfolioVisible(visible) {
-	document.getElementById('photo-portfolio-grid').style.display = visible ? '' : 'none';
+	visibilityStyleText = visible ? '' : 'none';
+	document.getElementById('photo-portfolio-grid').style.display = visibilityStyleText;
+	document.getElementById('photography-click-advice').style.display = visibilityStyleText;
 }
 
 function setAlbumVisible(targetId) {

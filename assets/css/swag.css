@@ -100,7 +100,7 @@ header > p {
 	max-width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-gap: 2vw;
+	grid-gap: 1vw;
 }
 
 #photo-portfolio-grid img {
