@@ -106,6 +106,7 @@ header > p {
 #photo-portfolio-grid img {
 	max-width: 100%;
 	transition: opacity 0.3s ease;
+	cursor: pointer;
 }
 
 #photo-portfolio-grid img:hover {
