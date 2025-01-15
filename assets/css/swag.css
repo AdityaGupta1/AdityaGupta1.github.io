@@ -31,13 +31,13 @@ p {
 .item h3 {
     font-size: 1.3em;
     text-align: left;
-    padding: 0 1.6vh 0 1.6vh;
+    padding: 0 0.8em 0 0.8em;
 }
 
 .item h5 {
     text-align: left;
     font-size: 0.8em;
-    padding-left: 1.6vh;
+    padding: 0 1.3em 0 1.3em;
     color: #666;
 }
 
