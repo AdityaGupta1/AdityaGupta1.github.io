@@ -146,3 +146,7 @@ p.photo-album-back {
 	opacity: 1;
 	transition: opacity 500ms;
 }
+
+.horizontal a, .vertical a {
+    border-bottom: none;
+}
