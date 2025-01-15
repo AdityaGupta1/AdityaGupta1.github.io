@@ -24,7 +24,6 @@ function selectSection(id, subsection = '') {
 function setPortfolioVisible(visible) {
     visibilityStyleText = visible ? '' : 'none';
     document.getElementById('photo-portfolio-grid').style.display = visibilityStyleText;
-    document.getElementById('photography-click-advice').style.display = visibilityStyleText;
 }
 
 function setAlbumVisible(targetId) {
