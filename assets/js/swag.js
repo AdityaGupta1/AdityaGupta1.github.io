@@ -105,4 +105,17 @@ document.addEventListener('DOMContentLoaded', setSectionFromHash);
 window.addEventListener('hashchange', setSectionFromHash);
 
 Fancybox.defaults.Hash = false;
-Fancybox.bind("[data-fancybox]", {});
+Fancybox.bind("[data-fancybox]", {
+    on: {
+        "init": (fancybox, event) => {
+            const headerToggleInside = document.getElementById('headerToggleInside');
+            headerToggleInside.style.opacity = '0';
+            headerToggleInside.style.pointerEvents = 'none';
+        },
+        "shouldClose": (fancybox, event) => {
+            const headerToggleInside = document.getElementById('headerToggleInside');
+            headerToggleInside.style.opacity = '1';
+            headerToggleInside.style.pointerEvents = '';
+        },
+    },
+  });
