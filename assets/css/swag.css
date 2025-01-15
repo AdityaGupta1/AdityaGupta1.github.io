@@ -117,11 +117,15 @@ header > p {
     margin-bottom: 1.5em;
 }
 
-p.photo-album-back {
+.photo-album-back {
     text-align: left;
     font-size: 18px;
     margin-bottom: 10px;
-    cursor: pointer;
+
+    span {
+        cursor: pointer;
+        padding: 5px;
+    }
 }
 
 .bx-link {
