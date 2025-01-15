@@ -118,4 +118,7 @@ Fancybox.bind("[data-fancybox]", {
             headerToggleInside.style.pointerEvents = '';
         },
     },
+    Images: {
+        protected: true
+    },
   });
