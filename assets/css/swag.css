@@ -136,3 +136,13 @@ p.photo-album-back {
 .header-no-desc {
     padding-bottom: 20px;
 }
+
+.lazyload,
+.lazyloading {
+	opacity: 0;
+}
+
+.lazyloaded {
+	opacity: 1;
+	transition: opacity 500ms;
+}
