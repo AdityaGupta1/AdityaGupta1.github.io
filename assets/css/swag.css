@@ -24,28 +24,30 @@ p {
     line-height: 1.75em;
 }
 
-.item h3 {
-    font-size: 1.3em;
-    text-align: left;
-    padding: 0 0.8em 0 0.8em;
-}
+.item {
+    h3 {
+        font-size: 1.3em;
+        text-align: left;
+        padding: 0 0.8em 0 0.8em;
+    }
 
-.item h5 {
-    text-align: left;
-    font-size: 0.8em;
-    padding: 0 1.3em 0 1.3em;
-    color: #666;
-}
+    h5 {
+        text-align: left;
+        font-size: 0.8em;
+        padding: 0 1.3em 0 1.3em;
+        color: #666;
+    }
 
-.item p {
-    padding-left: 5px;
-    padding-right: 5px;
-    font-size: 1em;
-    margin-top: 8px;
-}
+    p {
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 1em;
+        margin-top: 8px;
+    }
 
-.item header {
-    padding: 1.2vh 0 1.2vh 0;
+    header {
+        padding: 1.2vh 0 1.2vh 0;
+    }
 }
 
 .col-4, .col-12-mobile {
@@ -68,13 +70,13 @@ header > p {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 0.5vw;
     grid-auto-flow: dense;
-}
 
-.grid-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
 }
 
 .horizontal {
@@ -97,20 +99,20 @@ header > p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1vw;
-}
 
-#photo-portfolio-grid img {
-    max-width: 100%;
-    transition: opacity 0.3s ease;
-    cursor: pointer;
-}
+    img {
+        max-width: 100%;
+        transition: opacity 0.3s ease;
+        cursor: pointer;
+    }
 
-#photo-portfolio-grid img:hover {
-    opacity: 0.5;
-}
+    img:hover {
+        opacity: 0.5;
+    }
 
-#photo-portfolio-grid > article {
-    margin: 0;
+    article {
+        margin: 0;
+    }
 }
 
 .container > p {
