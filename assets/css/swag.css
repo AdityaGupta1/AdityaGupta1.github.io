@@ -8,10 +8,6 @@ html, body, #main-flex, section {
     height: 100%;
 }
 
-html {
-    overflow-y: scroll;
-}
-
 #main-flex {
     display: flex;
     min-height: 100vh;

@@ -105,7 +105,4 @@ document.addEventListener('DOMContentLoaded', setSectionFromHash);
 window.addEventListener('hashchange', setSectionFromHash);
 
 Fancybox.defaults.Hash = false;
-
-Fancybox.bind("[data-fancybox]", {
-    hideScrollbar: false
-});
+Fancybox.bind("[data-fancybox]", {});
