@@ -297,12 +297,20 @@
               </header>
 
               <div id="photo-portfolio-grid">
+                <article class="item" onclick="activateAlbum('torres')">
+                  <header>
+                    <h3>Torres del Paine + Punta Arenas</h3>
+                    <h5>Feb 2025</h5>
+                  </header>
+                  <a class="image fit"><img data-src="images/photos/torres_del_paine/thumbnail/004.webp" class="lazyload" /></a>
+                </article>
+
                 <article class="item" onclick="activateAlbum('australia')">
                   <header>
                     <h3>Australia + Hawaii</h3>
-                    <h5>2024-25</h5>
+                    <h5>Dec 2024 - Jan 2025</h5>
                   </header>
-                  <a class="image fit"><img data-src="images/photos/australia_hawaii/001.webp" class="lazyload" /></a>
+                  <a class="image fit"><img data-src="images/photos/australia_hawaii/thumbnail/001.webp" class="lazyload" /></a>
                 </article>
 
                 <article class="item" onclick="activateAlbum('zoos')">
@@ -310,7 +318,7 @@
                     <h3>Zoos of the World</h3>
                     <h5>2024-ongoing</h5>
                   </header>
-                  <a class="image fit"><img data-src="images/photos/zoos/001.webp" class="lazyload" /></a>
+                  <a class="image fit"><img data-src="images/photos/zoos/thumbnail/001.webp" class="lazyload" /></a>
                 </article>
 
                 <article class="item" onclick="activateAlbum('tanzania')">
@@ -318,42 +326,74 @@
                     <h3>Tanzania Safari</h3>
                     <h5>2024</h5>
                   </header>
-                  <a class="image fit"><img data-src="images/photos/tanzania/006.webp" class="lazyload" /></a>
+                  <a class="image fit"><img data-src="images/photos/tanzania/thumbnail/006.webp" class="lazyload" /></a>
                 </article>
               </div>
 
               <div class="photo-album-back"><span onclick="deactivateAlbum()"><< Back</span></div>
 
-              <div id="australia-photos" class="photo-album-container">
+              <!-- hd photos = 2560px long side, lossless compression, 100% quality -->
+              <!-- thumbnail photos = 960px long side, 88% quality -->
+
+              <div id="torres-photos" class="photo-album-container">
                 <header>
-                  <h3>Australia + Hawaii</h3>
-                  <h5>2024-25</h5>
+                  <h3>Torres del Paine</h3>
+                  <h5>Feb 2025</h5>
                 </header>
 
                 <div class="grid-container photo-album-grid">
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/001.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/001.webp" class="lazyload" /></a></div>
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/002.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/002.webp" class="lazyload" /></a></div>
-                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/021.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/021.webp" class="lazyload" /></a></div>
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/003.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/003.webp" class="lazyload" /></a></div>
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/004.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/004.webp" class="lazyload" /></a></div>
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/005.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/005.webp" class="lazyload" /></a></div>
-                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/023.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/023.webp" class="lazyload" /></a></div>
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/006.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/006.webp" class="lazyload" /></a></div>
-                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/022.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/022.webp" class="lazyload" /></a></div>
-                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/024.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/024.webp" class="lazyload" /></a></div>
-                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/026.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/026.webp" class="lazyload" /></a></div>
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/010.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/010.webp" class="lazyload" /></a></div>
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/011.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/011.webp" class="lazyload" /></a></div>
-                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/027.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/027.webp" class="lazyload" /></a></div>
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/012.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/012.webp" class="lazyload" /></a></div>
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/013.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/013.webp" class="lazyload" /></a></div>
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/014.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/014.webp" class="lazyload" /></a></div>
-                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/029.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/029.webp" class="lazyload" /></a></div>
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/015.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/015.webp" class="lazyload" /></a></div>
-                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/030.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/030.webp" class="lazyload" /></a></div>
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/016.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/016.webp" class="lazyload" /></a></div>
-                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/031.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/031.webp" class="lazyload" /></a></div>
-                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/032.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/032.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/torres_del_paine/hd/001.webp" data-fancybox="photos-australia"><img data-src="images/photos/torres_del_paine/thumbnail/001.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/torres_del_paine/hd/002.webp" data-fancybox="photos-australia"><img data-src="images/photos/torres_del_paine/thumbnail/002.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/torres_del_paine/hd/003.webp" data-fancybox="photos-australia"><img data-src="images/photos/torres_del_paine/thumbnail/003.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/torres_del_paine/hd/004.webp" data-fancybox="photos-australia"><img data-src="images/photos/torres_del_paine/thumbnail/004.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/torres_del_paine/hd/005.webp" data-fancybox="photos-australia"><img data-src="images/photos/torres_del_paine/thumbnail/005.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/torres_del_paine/hd/006.webp" data-fancybox="photos-australia"><img data-src="images/photos/torres_del_paine/thumbnail/006.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/torres_del_paine/hd/007.webp" data-fancybox="photos-australia"><img data-src="images/photos/torres_del_paine/thumbnail/007.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/torres_del_paine/hd/008.webp" data-fancybox="photos-australia"><img data-src="images/photos/torres_del_paine/thumbnail/008.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/torres_del_paine/hd/013.webp" data-fancybox="photos-australia"><img data-src="images/photos/torres_del_paine/thumbnail/013.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/torres_del_paine/hd/011.webp" data-fancybox="photos-australia"><img data-src="images/photos/torres_del_paine/thumbnail/011.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/torres_del_paine/hd/012.webp" data-fancybox="photos-australia"><img data-src="images/photos/torres_del_paine/thumbnail/012.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/torres_del_paine/hd/009.webp" data-fancybox="photos-australia"><img data-src="images/photos/torres_del_paine/thumbnail/009.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/torres_del_paine/hd/010.webp" data-fancybox="photos-australia"><img data-src="images/photos/torres_del_paine/thumbnail/010.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/torres_del_paine/hd/014.webp" data-fancybox="photos-australia"><img data-src="images/photos/torres_del_paine/thumbnail/014.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/torres_del_paine/hd/015.webp" data-fancybox="photos-australia"><img data-src="images/photos/torres_del_paine/thumbnail/015.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/torres_del_paine/hd/016.webp" data-fancybox="photos-australia"><img data-src="images/photos/torres_del_paine/thumbnail/016.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/torres_del_paine/hd/017.webp" data-fancybox="photos-australia"><img data-src="images/photos/torres_del_paine/thumbnail/017.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/torres_del_paine/hd/018.webp" data-fancybox="photos-australia"><img data-src="images/photos/torres_del_paine/thumbnail/018.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/torres_del_paine/hd/019.webp" data-fancybox="photos-australia"><img data-src="images/photos/torres_del_paine/thumbnail/019.webp" class="lazyload" /></a></div>
+                </div>
+              </div>
+
+              <div id="australia-photos" class="photo-album-container">
+                <header>
+                  <h3>Australia + Hawaii</h3>
+                  <h5>Dec 2024 - Jan 2025</h5>
+                </header>
+
+                <div class="grid-container photo-album-grid">
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/001.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/001.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/002.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/002.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/021.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/021.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/003.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/003.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/004.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/004.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/005.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/005.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/023.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/023.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/006.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/006.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/022.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/022.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/024.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/024.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/026.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/026.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/010.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/010.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/011.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/011.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/027.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/027.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/012.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/012.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/013.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/013.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/014.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/014.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/029.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/029.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/015.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/015.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/030.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/030.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/016.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/016.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/031.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/031.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/australia_hawaii/hd/032.webp" data-fancybox="photos-australia"><img data-src="images/photos/australia_hawaii/thumbnail/032.webp" class="lazyload" /></a></div>
                 </div>
               </div>
 
@@ -364,13 +404,13 @@
                 </header>
 
                 <div class="grid-container photo-album-grid">
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/zoos/hd/001.webp" data-fancybox="photos-zoos"><img data-src="images/photos/zoos/001.webp" class="lazyload" /></a></div>
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/zoos/hd/002.webp" data-fancybox="photos-zoos"><img data-src="images/photos/zoos/002.webp" class="lazyload" /></a></div>
-                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/zoos/hd/004.webp" data-fancybox="photos-zoos"><img data-src="images/photos/zoos/004.webp" class="lazyload" /></a></div>
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/zoos/hd/003.webp" data-fancybox="photos-zoos"><img data-src="images/photos/zoos/003.webp" class="lazyload" /></a></div>
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/zoos/hd/005.webp" data-fancybox="photos-zoos"><img data-src="images/photos/zoos/005.webp" class="lazyload" /></a></div>
-                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/zoos/hd/007.webp" data-fancybox="photos-zoos"><img data-src="images/photos/zoos/007.webp" class="lazyload" /></a></div>
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/zoos/hd/006.webp" data-fancybox="photos-zoos"><img data-src="images/photos/zoos/006.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/zoos/hd/001.webp" data-fancybox="photos-zoos"><img data-src="images/photos/zoos/thumbnail/001.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/zoos/hd/002.webp" data-fancybox="photos-zoos"><img data-src="images/photos/zoos/thumbnail/002.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/zoos/hd/004.webp" data-fancybox="photos-zoos"><img data-src="images/photos/zoos/thumbnail/004.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/zoos/hd/003.webp" data-fancybox="photos-zoos"><img data-src="images/photos/zoos/thumbnail/003.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/zoos/hd/005.webp" data-fancybox="photos-zoos"><img data-src="images/photos/zoos/thumbnail/005.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/zoos/hd/007.webp" data-fancybox="photos-zoos"><img data-src="images/photos/zoos/thumbnail/007.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/zoos/hd/006.webp" data-fancybox="photos-zoos"><img data-src="images/photos/zoos/thumbnail/006.webp" class="lazyload" /></a></div>
                 </div>
               </div>
 
@@ -381,12 +421,12 @@
                 </header>
 
                 <div class="grid-container photo-album-grid">
-                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/tanzania/hd/002.webp" data-fancybox="photos-tanzania"><img data-src="images/photos/tanzania/002.webp" class="lazyload" /></a></div>
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/tanzania/hd/001.webp" data-fancybox="photos-tanzania"><img data-src="images/photos/tanzania/001.webp" class="lazyload" /></a></div>
-                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/tanzania/hd/004.webp" data-fancybox="photos-tanzania"><img data-src="images/photos/tanzania/004.webp" class="lazyload" /></a></div>
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/tanzania/hd/003.webp" data-fancybox="photos-tanzania"><img data-src="images/photos/tanzania/003.webp" class="lazyload" /></a></div>
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/tanzania/hd/005.webp" data-fancybox="photos-tanzania"><img data-src="images/photos/tanzania/005.webp" class="lazyload" /></a></div>
-                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/tanzania/hd/006.webp" data-fancybox="photos-tanzania"><img data-src="images/photos/tanzania/006.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/tanzania/thumbnail/hd/002.webp" data-fancybox="photos-tanzania"><img data-src="images/photos/tanzania/thumbnail/002.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/tanzania/thumbnail/hd/001.webp" data-fancybox="photos-tanzania"><img data-src="images/photos/tanzania/thumbnail/001.webp" class="lazyload" /></a></div>
+                  <div class="vertical"><a href="https://cdn.adityag1.com/images/photos/tanzania/thumbnail/hd/004.webp" data-fancybox="photos-tanzania"><img data-src="images/photos/tanzania/thumbnail/004.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/tanzania/thumbnail/hd/003.webp" data-fancybox="photos-tanzania"><img data-src="images/photos/tanzania/thumbnail/003.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/tanzania/thumbnail/hd/005.webp" data-fancybox="photos-tanzania"><img data-src="images/photos/tanzania/thumbnail/005.webp" class="lazyload" /></a></div>
+                  <div class="horizontal"><a href="https://cdn.adityag1.com/images/photos/tanzania/thumbnail/hd/006.webp" data-fancybox="photos-tanzania"><img data-src="images/photos/tanzania/thumbnail/006.webp" class="lazyload" /></a></div>
                 </div>
               </div>
 
