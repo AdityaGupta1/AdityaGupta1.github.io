@@ -39,7 +39,7 @@ function setAlbumBackVisibility(visible) {
 }
 
 function activateAlbum(albumName) {
-    targetId = albumName + "-photos";
+    targetId = `photos-${albumName}`;
 
     if (!document.getElementById(targetId)) {
         return false;
