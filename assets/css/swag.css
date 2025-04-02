@@ -103,6 +103,7 @@ header > p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1vw;
+    align-items: start;
 
     img {
         max-width: 100%;
