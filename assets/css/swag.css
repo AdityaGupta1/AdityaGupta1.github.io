@@ -98,7 +98,11 @@ header > p {
     width: 100%;
 }
 
-#photo-portfolio-grid {
+#photo-portfolio-grid-all > h3 {
+    padding: 0 0 0.6em 0;
+}
+
+.photo-portfolio-grid {
     max-width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;

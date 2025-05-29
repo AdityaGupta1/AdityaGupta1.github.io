@@ -23,11 +23,11 @@ function selectSection(id, subsection = '') {
 
 function setPortfolioVisible(visible) {
     visibilityStyleText = visible ? '' : 'none';
-    document.getElementById('photo-portfolio-grid').style.display = visibilityStyleText;
+    document.getElementById('photo-portfolio-grid-all').style.display = visibilityStyleText;
 }
 
 function setAlbumVisible(targetId) {
-    Array.from(document.getElementsByClassName('photo-album-container')).forEach(element => {
+    Array.from(document.getElementsByClassName('photo-album')).forEach(element => {
         element.style.display = element.id === targetId ? '' : 'none';
     });
 }
