@@ -305,14 +305,6 @@
 
                 const albums = [
                   {
-                    id: "antarctica",
-                    title: "Antarctica + Ushuaia, Argentina",
-                    date: "Feb - Mar 2025",
-                    thumb: 6,
-                    featured: true,
-                    images: [[1, "v"], [2, "h"], [3, "v"], [4, "h"], [5, "h"], [6, "h"], [7, "h"], [8, "v"], [9, "v"], [10, "h"], [11, "h"], [12, "h"], [13, "h"], [14, "v"], [15, "v"], [19, "h"], [17, "h"], [18, "v"], [16, "h"], [20, "v"], [21, "h"], [22, "v"], [23, "v"], [24, "h"], [25, "h"], [26, "v"], [27, "h"], [28, "v"], [29, "h"], [30, "h"], [31, "v"], [32, "h"], [33, "v"], [34, "h"], [35, "h"], [36, "h"], [37, "v"], [38, "v"], [39, "v"], [40, "h"], [41, "v"]]
-                  },
-                  {
                     id: "laguna-seca",
                     title: "IMSA Monterey SportsCar Championship",
                     date: "May 2025",
@@ -320,11 +312,25 @@
                     images: [[1, "h"], [2, "h"], [3, "h"], [4, "h"], [5, "v"], [6, "h"], [7, "v"], [8, "h"], [9, "h"], [10, "h"], [11, "h"], [12, "h"]]
                   },
                   {
+                    id: "california",
+                    title: "California, USA",
+                    date: "2025 - ongoing",
+                    thumb: 16,
+                    images: [[1, "v"], [2, "h"], [3, "v"], [4, "h"], [5, "h"], [7, "h"], [8, "h"], [15, "h"], [9, "v"], [10, "v"], [11, "v"], [12, "h"], [14, "v"], [6, "h"], [16, "h"], [13, "v"]]
+                  },
+                  {
                     id: "japan",
                     title: "Japan",
                     date: "Mar 2025",
                     thumb: 14,
                     images: [[3, "v"], [1, "h"], [2, "v"], [4, "v"], [6, "v"], [5, "h"], [7, "h"], [8, "h"], [9, "v"], [10, "h"], [11, "v"], [12, "v"], [13, "v"], [14, "h"], [15, "h"], [16, "h"], [17, "v"], [18, "h"]]
+                  },
+                  {
+                    id: "antarctica",
+                    title: "Antarctica + Ushuaia, Argentina",
+                    date: "Feb - Mar 2025",
+                    thumb: 6,
+                    images: [[1, "v"], [2, "h"], [3, "v"], [4, "h"], [5, "h"], [6, "h"], [7, "h"], [8, "v"], [9, "v"], [10, "h"], [11, "h"], [12, "h"], [13, "h"], [14, "v"], [15, "v"], [19, "h"], [17, "h"], [18, "v"], [16, "h"], [20, "v"], [21, "h"], [22, "v"], [23, "v"], [24, "h"], [25, "h"], [26, "v"], [27, "h"], [28, "v"], [29, "h"], [30, "h"], [31, "v"], [32, "h"], [33, "v"], [34, "h"], [35, "h"], [36, "h"], [37, "v"], [38, "v"], [39, "v"], [40, "h"], [41, "v"]]
                   },
                   {
                     id: "torres",
@@ -356,6 +362,8 @@
                   }
                 ];
 
+                const featuredAlbums = ["antarctica", "california"]
+
                 const featuredGrid = document.getElementById("featured-grid");
                 const allGrid = document.getElementById("all-grid");
 
@@ -371,7 +379,7 @@
                       </a>
                     </article>
                   `;
-                  const target = album.featured ? featuredGrid : allGrid;
+                  const target = (featuredAlbums.includes(album.id)) ? featuredGrid : allGrid;
                   target.insertAdjacentHTML("beforeend", html);
                 }
 
