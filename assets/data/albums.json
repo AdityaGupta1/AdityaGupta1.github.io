@@ -1,4 +1,6 @@
 {
+  "_hd": "2560px long side, lossless compression, 100% quality ",
+  "_thumbnail": "960px long side, 88% quality",
   "photoPaths": {
     "thumbnailBase": "images/photos",
     "hdBase": "https://cdn.adityag1.com/images/photos"
@@ -24,7 +26,7 @@
       "title": "California, USA",
       "date": "2025 - ongoing",
       "cover": 16,
-      "images": [1, 2, 3, 17, 22, 9, 10, 12, 7, 18, 11, 16, 19, 20, 8, 21, 24, 25, 23]
+      "images": [1, 28, 3, 17, 22, 9, 10, 31, 27, 18, 30, 16, 19, 20, 29, 21, 24, 25, 23]
     },
     {
       "id": "japan",

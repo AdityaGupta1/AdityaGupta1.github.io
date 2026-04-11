@@ -19,10 +19,25 @@ function warn(msg) {
   console.warn(msg);
 }
 
+function stripUnderscoreKeys(value) {
+  if (value === null || typeof value !== "object") {
+    return value;
+  }
+  if (Array.isArray(value)) {
+    return value.map(stripUnderscoreKeys);
+  }
+  const out = {};
+  for (const [k, v] of Object.entries(value)) {
+    if (k.startsWith("_")) continue;
+    out[k] = stripUnderscoreKeys(v);
+  }
+  return out;
+}
+
 const raw = fs.readFileSync(jsonPath, "utf8");
 let data;
 try {
-  data = JSON.parse(raw);
+  data = stripUnderscoreKeys(JSON.parse(raw));
 } catch (e) {
   fail("Invalid JSON: " + e.message);
 }
