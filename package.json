@@ -1,0 +1,12 @@
+{
+  "name": "adityagupta1-github-io",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate-albums-manifest": "node scripts/generate-albums-manifest.mjs",
+    "import-album-photos": "node scripts/import-album-photos.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}

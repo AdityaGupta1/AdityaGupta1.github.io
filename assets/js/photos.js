@@ -170,7 +170,7 @@
     }
     if (location.protocol === "file:") {
       throw new Error(
-        "Album manifest missing: include assets/js/albums-manifest.js before photos.js, or run: node scripts/sync-albums-manifest.mjs"
+        "Album manifest missing: include assets/js/albums-manifest.js before photos.js, or run: node scripts/generate-albums-manifest.mjs"
       );
     }
     var res = await fetch(

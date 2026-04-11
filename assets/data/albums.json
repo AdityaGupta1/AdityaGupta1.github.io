@@ -8,6 +8,13 @@
   "featuredIds": ["antarctica", "california"],
   "albums": [
     {
+      "id": "fairbanks",
+      "title": "Fairbanks, Alaska, USA",
+      "date": "Mar 2026",
+      "cover": 7,
+      "images": [2, 4, 5, 3, 1, 7, 8, 6]
+    },
+    {
       "id": "china",
       "title": "China",
       "date": "Dec 2025",
