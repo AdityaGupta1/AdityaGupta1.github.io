@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout currentPage="projects">
+  <section id="projects">
+    <div class="container">
+      <header class="header-no-desc">
+        <h2>Projects</h2>
+      </header>
+
+      <article class="item">
+        <a class="image fit"><img data-src="/images/projects/minecraft.webp" class="lazyload" /></a>
+        <header>
+          <h3><a href="https://github.com/AdityaGupta1/mega-minecraft" target="_blank">Mega Minecraft<i class='bx bx-link'></i></a></h3>
+          <p>Minecraft with real-time RTX path tracing and GPU-acclerated terrain generation. Made together with two teammates using C++, CUDA, OptiX, and DirectX. Includes various biomes, infinite procedurally generated terrain, diffuse and specular shading, and a day/night cycle.</p>
+        </header>
+      </article>
+
+      <article class="item">
+        <a class="image fit"><img data-src="/images/projects/path-tracer.webp" class="lazyload" /></a>
+        <header>
+          <h3><a href="https://github.com/AdityaGupta1/CIS-5650-Project3-CUDA-Path-Tracer/">GPU Path Tracer<i class='bx bx-link'></i></a></h3>
+          <p>A path tracer written in C++ and CUDA, complete with features like specular reflection and refraction, depth of field, BVH construction and traversal, and denoising using Intel Open Image Denoise. Models in the render came from Sketchfab; attribution is given on the project page.</p>
+        </header>
+      </article>
+
+      <article class="item">
+        <a class="image fit"><img data-src="/images/projects/crystal-machine.webp" class="lazyload" /></a>
+        <header>
+          <h3><a href="https://github.com/AdityaGupta1/CIS-5660-final-project" target="_blank">Crystal Machine<i class='bx bx-link'></i></a></h3>
+          <p>Procedurally generated crystals made in Houdini, rendered using Redshift. Changing the seed value of a generator creates an entirely new crystal without any extra user input.</p>
+        </header>
+      </article>
+
+      <article class="item">
+        <a class="image fit"><img data-src="/images/projects/waluig-io.webp" class="lazyload" /></a>
+        <header>
+          <h3><a href="https://github.com/AdityaGupta1/waluig-IO" target="_blank">Waluig-IO<i class='bx bx-link'></i></a></h3>
+          <p>A genetic algorithm written in Java to play the original Super Mario Bros, based on <a href="https://www.youtube.com/watch?v=qv6UVOQ0F44" target="_blank">MarI/O by SethBling</a> and the <a href="https://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf" target="_blank">NeuroEvolution of Augmenting Topologies (NEAT) method</a>. Plays the game and learns from its mistakes to progress farther each time.</p>
+        </header>
+      </article>
+
+      <article class="item">
+        <a class="image fit"><img data-src="/images/projects/mobycraft.webp" class="lazyload" /></a>
+        <header>
+          <h3><a href="https://github.com/AdityaGupta1/mobycraft" target="_blank">Mobycraft<i class='bx bx-link'></i></a></h3>
+          <p>A Minecraft mod written in Java to view and manage Docker containers. Presented at DockerCon 2016. See slides <a href="https://www.slideshare.net/Docker/mobycraft-docker-in-8bit-by-aditya-gupta" target="_blank">here</a> and related podcast <a href="https://softwareengineeringdaily.com/2016/08/02/mobycraft-with-aditya-gupta/" target="_blank">here</a>. Was also integrated with Netflix's Titus container management platform.</p>
+        </header>
+      </article>
+
+      <article class="item">
+        <a class="image fit"><img data-src="/images/projects/book.webp" class="lazyload" /></a>
+        <header>
+          <h3><a href="https://www.oreilly.com/library/view/minecraft-modding-with/9781491918883/" target="_blank">Minecraft Modding with Forge<i class='bx bx-link'></i></a></h3>
+          <p>Book co-authored with my dad which teaches kids how to modify Minecraft using Java. Published by O'Reilly and translated into various languages.</p>
+        </header>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { albums } from '../../data/albums';
+import { getAlbumOrientations } from '../../utils/getOrientations';
+
+export async function getStaticPaths() {
+  return Promise.all(albums.map(async (album) => {
+    const orientations = await getAlbumOrientations(album.id, album.images);
+    return {
+      params: { id: album.id },
+      props: { album, orientations }
+    };
+  }));
+}
+
+const { album, orientations } = Astro.props;
+---
+
+<BaseLayout currentPage="photography">
+  <section id="photography">
+    <div class="container">
+      <div class="photo-album-back"><a href="/photography">&lt;&lt; Back</a></div>
+
+      <header>
+        <h3>{album.title}</h3>
+        <h5>{album.date}</h5>
+      </header>
+
+      <div class="grid-container photo-album-grid">
+        {album.images.map(num => {
+          const layout = orientations[num] === 'v' ? 'vertical' : 'horizontal';
+          const filename = num.toString().padStart(3, '0');
+          return (
+            <div class={layout}>
+              <a href={`https://cdn.adityag1.com/images/photos/${album.id}/hd/${filename}.webp`}
+                 data-fancybox={`photos-${album.id}`}>
+                <img data-src={`/images/photos/${album.id}/thumbnail/${filename}.webp`}
+                     class="lazyload" />
+              </a>
+            </div>
+          );
+        })}
+      </div>
+
+      <div class="photo-album-back" style="margin-top: 10px;"><a href="/photography">&lt;&lt; Back</a></div>
+    </div>
+  </section>
+</BaseLayout>

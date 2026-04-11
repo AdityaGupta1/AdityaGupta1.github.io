@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { albums, featuredAlbums } from '../../data/albums';
+
+const featured = albums.filter(a => featuredAlbums.includes(a.id));
+const all = albums.filter(a => !featuredAlbums.includes(a.id));
+---
+
+<BaseLayout currentPage="photography">
+  <section id="photography">
+    <div class="container">
+      <header class="header-no-desc">
+        <h2>Photography</h2>
+      </header>
+
+      <div id="photo-portfolio-grid-all">
+        <h3>Featured</h3>
+        <div class="photo-portfolio-grid" style="margin-bottom: 2.2em;">
+          {featured.map(album => (
+            <article class="item">
+              <header>
+                <h3>{album.title}</h3>
+                <h5>{album.date}</h5>
+              </header>
+              <a class="image fit" href={`/photography/${album.id}`}>
+                <img data-src={`/images/photos/${album.id}/thumbnail/${album.thumb.toString().padStart(3, '0')}.webp`} class="lazyload" />
+              </a>
+            </article>
+          ))}
+        </div>
+
+        <h3>All</h3>
+        <div class="photo-portfolio-grid">
+          {all.map(album => (
+            <article class="item">
+              <header>
+                <h3>{album.title}</h3>
+                <h5>{album.date}</h5>
+              </header>
+              <a class="image fit" href={`/photography/${album.id}`}>
+                <img data-src={`/images/photos/${album.id}/thumbnail/${album.thumb.toString().padStart(3, '0')}.webp`} class="lazyload" />
+              </a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
