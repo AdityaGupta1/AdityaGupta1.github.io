@@ -35,6 +35,8 @@
     <script src="assets/js/util.js" defer></script>
     <script src="assets/js/main.js" defer></script>
 
+    <script src="assets/js/albums-manifest.js" defer></script>
+    <script src="assets/js/photos.js" defer></script>
     <script src="assets/js/swag.js" defer></script>
   </head>
   <body class="is-preload">
@@ -46,8 +48,8 @@
 
           <!-- Logo -->
             <div id="logo">
-              <img data-src="images/avatar.webp" style="margin-left: auto; margin-right: auto; display: block; margin-bottom: 20px; width: 80%; border-radius: 50%;" class="lazyload" />
-              <span style="text-align: center;">
+              <img data-src="images/avatar.webp" class="lazyload logo-avatar" alt="" />
+              <span class="logo-tagline">
                 <h1 id="title">Aditya Gupta</h1>
                 <p>cool guy</p>
               </span>
@@ -56,10 +58,10 @@
           <!-- Nav -->
             <nav id="nav">
               <ul>
-                <li><a href="#" id='nav-projects' onclick="selectSection('projects')"><span class="icon solid fa-laptop">Projects</span></a></li>
-                <li><a href="#" id='nav-art' onclick="selectSection('art')"><span class="icon solid fa-paint-brush">Art</span></a></li>
-                <li><a href="#" id='nav-photography' onclick="selectSection('photography'); deactivateAlbum();"><span class="icon solid fa-camera">Photography</span></a></li>
-                <li><a href="#" id='nav-about' onclick="selectSection('about')"><span class="icon solid fa-user">About</span></a></li>
+                <li><a href="#" id="nav-projects" data-section="projects"><span class="icon solid fa-laptop">Projects</span></a></li>
+                <li><a href="#" id="nav-art" data-section="art"><span class="icon solid fa-paint-brush">Art</span></a></li>
+                <li><a href="#" id="nav-photography" data-section="photography"><span class="icon solid fa-camera">Photography</span></a></li>
+                <li><a href="#" id="nav-about" data-section="about"><span class="icon solid fa-user">About</span></a></li>
                 <li><a href="https://drive.google.com/file/d/10tF34jgbSgniKVnwsj6VeKj-OeNcAgi0/view?usp=sharing" target="_blank"><span class="icon solid fa-file-alt">Resume</span></a></li>
               </ul>
             </nav>
@@ -79,7 +81,7 @@
 
       </div>
 
-      <div id='main-flex' style="display: none; height: 100vh; overflow: auto;">
+      <div id="main-flex" class="main-flex-hidden">
         <div id="main">
 
           <section id="projects">
@@ -279,6 +281,7 @@
             </div>
           </section>
 
+          <!-- hd photos = 2560px long side, lossless compression, 100% quality; thumbnails = 960px long side, 88% quality -->
           <section id="photography">
             <div class="container">
               <header class="header-no-desc">
@@ -287,141 +290,17 @@
 
               <div id="photo-portfolio-grid-all">
                 <h3>Featured</h3>
-                <div class="photo-portfolio-grid" id="featured-grid" style="margin-bottom: 2.2em;"></div>
+                <div class="photo-portfolio-grid photo-featured-grid" id="featured-grid"></div>
 
                 <h3>All</h3>
                 <div class="photo-portfolio-grid" id="all-grid"></div>
               </div>
 
-              <div class="photo-album-back"><span onclick="deactivateAlbum()"><< Back</span></div>
+              <div class="photo-album-back"><span class="photo-album-back-button" role="button" tabindex="0">&lt;&lt; Back</span></div>
 
               <div id="photo-album-container"></div>
 
-              <div class="photo-album-back" style="margin-top: 10px;"><span onclick="deactivateAlbum()"><< Back</span></div>
-
-              <script>
-                // hd photos = 2560px long side, lossless compression, 100% quality
-                // thumbnail photos = 960px long side, 88% quality
-
-                const albums = [
-                  {
-                    id: "china",
-                    title: "China",
-                    date: "Dec 2025",
-                    thumb: 7,
-                    images: [[1, "v"], [2, "h"], [3, "v"], [7, "h"], [5, "h"], [6, "h"], [4, "h"], [11, "h"], [9, "h"], [10, "v"], [13, "h"], [12, "v"], [14, "v"], [15, "v"], [16, "h"]]
-                  },
-                  {
-                    id: "laguna-seca",
-                    title: "WeatherTech Raceway Laguna Seca",
-                    date: "May - Sep 2025",
-                    thumb: 17,
-                    images: [[1, "h"], [19, "h"], [20, "h"], [17, "h"], [5, "v"], [6, "h"], [7, "v"], [13, "h"], [18, "h"], [14, "h"], [2, "h"], [15, "h"], [16, "h"], [11, "h"], [21, "h"]]
-                  },
-                  {
-                    id: "california",
-                    title: "California, USA",
-                    date: "2025 - ongoing",
-                    thumb: 16,
-                    images: [[1, "v"], [2, "h"], [3, "v"], [17, "h"], [22, "h"], [9, "v"], [10, "v"], [12, "h"], [7, "h"], [18, "h"], [11, "v"], [16, "h"], [19, "v"] , [20, "h"], [8, "h"], [21, "v"], [24, "h"], [25, "v"], [23, "h"]]
-                  },
-                  {
-                    id: "japan",
-                    title: "Japan",
-                    date: "Mar 2025",
-                    thumb: 14,
-                    images: [[3, "v"], [1, "h"], [2, "v"], [4, "v"], [6, "v"], [5, "h"], [7, "h"], [8, "h"], [9, "v"], [10, "h"], [11, "v"], [12, "v"], [13, "v"], [14, "h"], [15, "h"], [16, "h"], [17, "v"], [18, "h"]]
-                  },
-                  {
-                    id: "antarctica",
-                    title: "Antarctica + Ushuaia, Argentina",
-                    date: "Feb - Mar 2025",
-                    thumb: 6,
-                    images: [[1, "v"], [2, "h"], [3, "v"], [4, "h"], [5, "h"], [6, "h"], [7, "h"], [8, "v"], [9, "v"], [10, "h"], [11, "h"], [12, "h"], [13, "h"], [14, "v"], [15, "v"], [19, "h"], [17, "h"], [18, "v"], [16, "h"], [20, "v"], [21, "h"], [22, "v"], [23, "v"], [24, "h"], [25, "h"], [26, "v"], [27, "h"], [28, "v"], [29, "h"], [30, "h"], [31, "v"], [32, "h"], [33, "v"], [34, "h"], [35, "h"], [36, "h"], [37, "v"], [38, "v"], [39, "v"], [40, "h"], [41, "v"]]
-                  },
-                  {
-                    id: "torres",
-                    title: "Torres del Paine + Punta Arenas, Chile",
-                    date: "Feb 2025",
-                    thumb: 4,
-                    images: [[1, "v"], [2, "h"], [3, "v"], [4, "h"], [5, "h"], [6, "v"], [7, "h"], [8, "v"], [13, "h"], [11, "h"], [12, "h"], [9, "v"], [10, "v"], [14, "h"], [15, "h"], [16, "h"], [17, "h"], [18, "h"], [19, "v"]]
-                  },
-                  {
-                    id: "australia",
-                    title: "Australia + Hawaii",
-                    date: "Dec 2024 - Jan 2025",
-                    thumb: 1,
-                    images: [[1, "h"], [2, "h"], [21, "v"], [3, "h"], [4, "h"], [5, "h"], [23, "v"], [6, "h"], [22, "v"], [24, "v"], [26, "v"], [10, "h"], [11, "h"], [27, "v"], [12, "h"], [13, "h"], [14, "h"], [29, "v"], [15, "h"], [30, "v"], [16, "h"], [31, "v"], [32, "v"]]
-                  },
-                  {
-                    id: "zoos",
-                    title: "Zoos of the World",
-                    date: "2024 - ongoing",
-                    thumb: 1,
-                    images: [[4, "v"], [1, "h"], [8, "v"], [2, "h"], [5, "h"], [3, "h"], [6, "h"], [7, "v"]]
-                  },
-                  {
-                    id: "tanzania",
-                    title: "Tanzania Safari",
-                    date: "Jun 2024",
-                    thumb: 6,
-                    images: [[2, "v"], [1, "h"], [4, "v"], [3, "h"], [5, "h"], [6, "h"]]
-                  }
-                ];
-
-                const featuredAlbums = ["antarctica", "california"]
-
-                const featuredGrid = document.getElementById("featured-grid");
-                const allGrid = document.getElementById("all-grid");
-
-                function renderAlbumCover(album) {
-                  const html = `
-                    <article class="item" onclick="activateAlbum('${album.id}')">
-                      <header>
-                        <h3>${album.title}</h3>
-                        <h5>${album.date}</h5>
-                      </header>
-                      <a class="image fit">
-                        <img data-src="images/photos/${album.id}/thumbnail/${album.thumb.toString().padStart(3, '0')}.webp" class="lazyload" />
-                      </a>
-                    </article>
-                  `;
-                  const target = (featuredAlbums.includes(album.id)) ? featuredGrid : allGrid;
-                  target.insertAdjacentHTML("beforeend", html);
-                }
-
-                function renderAlbum(album) {
-                  const container = document.createElement("div");
-                  container.className = "photo-album";
-                  container.id = `photos-${album.id}`;
-
-                  container.innerHTML = `
-                    <header>
-                      <h3>${album.title}</h3>
-                      <h5>${album.date}</h5>
-                    </header>
-                    <div class="grid-container photo-album-grid">
-                      ${album.images.map(img => {
-                        const layout = img[1] === "v" ? "vertical" : "horizontal";
-                        const filename = img[0].toString().padStart(3, '0');
-                        return `
-                          <div class="${layout}">
-                            <a href="https://cdn.adityag1.com/images/photos/${album.id}/hd/${filename}.webp" data-fancybox="photos-${album.id}">
-                              <img data-src="images/photos/${album.id}/thumbnail/${filename}.webp" class="lazyload" />
-                            </a>
-                          </div>`;
-                      }).join("")}
-                    </div>
-                  `;
-
-                  document.getElementById("photo-album-container").appendChild(container);
-                }
-
-                for (const album of albums) {
-                  renderAlbumCover(album);
-                  renderAlbum(album);
-                }
-              </script>
+              <div class="photo-album-back photo-album-back-spacer"><span class="photo-album-back-button" role="button" tabindex="0">&lt;&lt; Back</span></div>
             </div>
           </section>
 
@@ -431,9 +310,9 @@
                 <h2>About</h2>
               </header>
 
-              <img data-src="images/me.webp" style="margin-left: auto; margin-right: auto; display: block; margin-bottom: 1.5vw; width: 40%; border-radius: 50%;" class="lazyload" />
+              <img data-src="images/me.webp" class="lazyload about-avatar" alt="" />
 
-              <h3 style="margin-bottom: 0.8em;">Hello, I'm Aditya.</h3>
+              <h3 class="about-greeting">Hello, I'm Aditya.</h3>
 
               <p>I'm a <strong>Real-Time Rendering Engineer</strong> at <strong>NVIDIA</strong>. My passion for computer graphics drives me to combine my strong coding background with my interest in creative technology. I've honed my technical skills through an <strong>MSE in Computer Graphics and Game Technology</strong> at the <strong>University of Pennsylvania</strong>, as well as personal projects. Additionally, I enjoy expressing my artistic side through wildlife photography and 3D renders.</p>
             </div>

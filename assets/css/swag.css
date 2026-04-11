@@ -192,3 +192,44 @@ header > p {
 #headerToggleInside {
     transition: opacity 0.3s ease;
 }
+
+#main-flex.main-flex-hidden {
+    display: none;
+    height: 100vh;
+    overflow: auto;
+}
+
+#logo .logo-avatar {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 20px;
+    width: 80%;
+    border-radius: 50%;
+}
+
+#logo .logo-tagline {
+    text-align: center;
+    display: block;
+}
+
+.photo-featured-grid {
+    margin-bottom: 2.2em;
+}
+
+.photo-album-back-spacer {
+    margin-top: 10px;
+}
+
+.about-avatar {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 1.5vw;
+    width: 40%;
+    border-radius: 50%;
+}
+
+.about-greeting {
+    margin-bottom: 0.8em;
+}
