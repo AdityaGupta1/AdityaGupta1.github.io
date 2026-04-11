@@ -186,3 +186,19 @@ header > p {
 #headerToggleInside {
     transition: opacity 0.3s ease;
 }
+
+/* View Transitions: keep sidebar snapshot static; fade only main content via transition:animate */
+@supports (view-transition-name: none) {
+    #header {
+        view-transition-name: sidebar;
+    }
+
+    ::view-transition-old(sidebar),
+    ::view-transition-new(sidebar) {
+        animation: none;
+    }
+
+    ::view-transition-group(root) {
+        animation-duration: 0.2s;
+    }
+}

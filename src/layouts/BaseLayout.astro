@@ -1,5 +1,5 @@
 ---
-import { ClientRouter } from 'astro:transitions';
+import { ClientRouter, fade } from 'astro:transitions';
 import Sidebar from '../components/Sidebar.astro';
 import '../styles/main.scss';
 import '../styles/swag.css';
@@ -27,7 +27,7 @@ const { currentPage } = Astro.props;
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'" />
 
-    <link rel="icon" type="image/x-icon" href="https://cdn.adityag1.com/images/avatar-icon.webp" />
+    <link rel="icon" type="image/webp" href="/images/avatar-icon.webp" />
 
     <script src="/assets/js/lazysizes.min.js" defer></script>
   </head>
@@ -41,7 +41,9 @@ const { currentPage } = Astro.props;
 
     <div id="main-flex">
       <div id="main">
-        <slot />
+        <div transition:animate={fade}>
+          <slot />
+        </div>
       </div>
 
       <div id="footer">

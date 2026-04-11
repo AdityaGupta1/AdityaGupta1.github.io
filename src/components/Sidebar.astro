@@ -10,7 +10,15 @@ const { currentPage } = Astro.props;
   <div class="top">
     <!-- Logo -->
     <div id="logo">
-      <img src="/images/avatar.webp" style="margin-left: auto; margin-right: auto; display: block; margin-bottom: 20px; width: 80%; border-radius: 50%;" />
+      <img
+        src="/images/avatar.webp"
+        alt=""
+        width="192"
+        height="192"
+        loading="eager"
+        decoding="async"
+        style="margin-left: auto; margin-right: auto; display: block; margin-bottom: 20px; width: 80%; height: auto; border-radius: 50%;"
+      />
       <span style="text-align: center;">
         <h1 id="title">Aditya Gupta</h1>
         <p>cool guy</p>
@@ -20,10 +28,10 @@ const { currentPage } = Astro.props;
     <!-- Nav -->
     <nav id="nav">
       <ul>
-        <li><a href="/" id="nav-projects" class={currentPage === 'projects' ? 'active' : ''}><span class="icon solid fa-laptop">Projects</span></a></li>
-        <li><a href="/art" id="nav-art" class={currentPage === 'art' ? 'active' : ''}><span class="icon solid fa-paint-brush">Art</span></a></li>
-        <li><a href="/photography" id="nav-photography" class={currentPage === 'photography' ? 'active' : ''}><span class="icon solid fa-camera">Photography</span></a></li>
-        <li><a href="/about" id="nav-about" class={currentPage === 'about' ? 'active' : ''}><span class="icon solid fa-user">About</span></a></li>
+        <li><a href="/" id="nav-projects" data-astro-prefetch="viewport" class={currentPage === 'projects' ? 'active' : ''}><span class="icon solid fa-laptop">Projects</span></a></li>
+        <li><a href="/art" id="nav-art" data-astro-prefetch="viewport" class={currentPage === 'art' ? 'active' : ''}><span class="icon solid fa-paint-brush">Art</span></a></li>
+        <li><a href="/photography" id="nav-photography" data-astro-prefetch="viewport" class={currentPage === 'photography' ? 'active' : ''}><span class="icon solid fa-camera">Photography</span></a></li>
+        <li><a href="/about" id="nav-about" data-astro-prefetch="viewport" class={currentPage === 'about' ? 'active' : ''}><span class="icon solid fa-user">About</span></a></li>
         <li><a href="https://drive.google.com/file/d/10tF34jgbSgniKVnwsj6VeKj-OeNcAgi0/view?usp=sharing" target="_blank"><span class="icon solid fa-file-alt">Resume</span></a></li>
       </ul>
     </nav>
