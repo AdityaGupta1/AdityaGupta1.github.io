@@ -1,15 +1,23 @@
 // the following code is pretty terrible but I don't want to use a web framework and this works well enough, so...
 
-function selectSection(id, subsection = '') {
+function selectSection(id, subsection = '', updateHash = true) {
     $('#main > section').addClass('inactive');
     $(`#${id}`).removeClass('inactive');
 
-    let newHash = `#${id}`;
-    if (subsection != '') {
-        newHash += `_${subsection}`;
+    if (updateHash) {
+        if (id === 'projects' && subsection === '') {
+            const h = window.location.hash;
+            if (h && h !== '#projects') {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+        } else {
+            let newHash = `#${id}`;
+            if (subsection != '') {
+                newHash += `_${subsection}`;
+            }
+            window.location.hash = newHash;
+        }
     }
-
-    window.location.hash = newHash;
     window.scrollTo(0,0);
 
     $('#nav').find('a').removeClass('active');
@@ -73,7 +81,8 @@ function setSectionFromHash() {
     let subsection = '';
 
     const hash = window.location.hash;
-    if (hash) {
+    const hasMeaningfulHash = hash.length > 1;
+    if (hasMeaningfulHash) {
         const split = hash.substring(1).split('_');
         section = split[0];
         if (split.length > 1) {
@@ -85,7 +94,7 @@ function setSectionFromHash() {
         section = 'projects';
     }
 
-    selectSection(section, subsection);
+    selectSection(section, subsection, hasMeaningfulHash);
 
     switch (section) {
         case 'photography':
