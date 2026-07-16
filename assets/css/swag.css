@@ -93,6 +93,17 @@ header > p {
     grid-column: span 1;
 }
 
+/* Lock grid row sizing to 3:2 tile geometry regardless of each photo's real
+   ratio; object-fit: cover then crops to fill. 3:4 is a 3:2 tile at half
+   width, so vertical tiles match the same row height. */
+.horizontal img {
+    aspect-ratio: 3 / 2;
+}
+
+.vertical img {
+    aspect-ratio: 3 / 4;
+}
+
 .photo-table {
     border-collapse: collapse;
     width: 100%;
