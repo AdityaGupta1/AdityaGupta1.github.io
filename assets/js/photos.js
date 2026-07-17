@@ -1,7 +1,7 @@
 /**
  * Photography: load manifest, render grids and album DOM, bind Fancybox.
- * hd photos = 2560px long side, lossless compression, 100% quality
- * thumbnail photos = 960px long side, 88% quality
+ * HD photos are served from cdn.adityag1.com, which auto-mirrors
+ * images/photos/ from this repo.
  */
 (function () {
   function pad3(n) {

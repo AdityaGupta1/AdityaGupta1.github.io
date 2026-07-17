@@ -1,9 +1,8 @@
 /**
  * Converts loose photos into album WebP pairs (HD + thumbnail) under
- * images/photos/<album-id>/hd/ and .../thumbnail/, matching assets/js/photos.js
- * and the _hd / _thumbnail notes in assets/data/albums.json:
- *   HD:         2560px long side, WebP lossless
- *   Thumbnail:  960px long side, WebP quality 88
+ * images/photos/<album-id>/hd/ and .../thumbnail/:
+ *   HD:         2560px long side, WebP quality 90
+ *   Thumbnail:  960px long side, WebP quality 90
  *
  * Requires: npm install (see package.json for sharp)
  *
@@ -28,8 +27,9 @@ const root = path.join(__dirname, "..");
 const jsonPath = path.join(root, "assets", "data", "albums.json");
 
 const HD_LONG = 2560;
+const HD_QUALITY = 90;
 const THUMB_LONG = 960;
-const THUMB_QUALITY = 88;
+const THUMB_QUALITY = 90;
 
 const IMAGE_EXT = new Set([
   ".jpg",
@@ -198,7 +198,7 @@ async function main() {
     await sharp(inputPath)
       .rotate()
       .resize(resizeHd)
-      .webp({ lossless: true })
+      .webp({ quality: HD_QUALITY })
       .toFile(outHd);
 
     await sharp(inputPath)
